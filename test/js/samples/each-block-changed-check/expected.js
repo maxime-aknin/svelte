@@ -52,8 +52,13 @@ function create_each_block(ctx) {
 			t4 = text(t4_value);
 			t5 = text(" ago:");
 			t6 = space();
+			html_tag = new HtmlTag(raw_value);
 			attr(span, "class", "meta");
-			html_tag = new HtmlTag(null);
+// <<<<<<< HEAD
+// 			html_tag = new HtmlTag(null);
+// =======
+			html_tag.a = null;
+// >>>>>>> fork_avi/fast-hydration
 			attr(div, "class", "comment");
 		},
 		m(target, anchor) {

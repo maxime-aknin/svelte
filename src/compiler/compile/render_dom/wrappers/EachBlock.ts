@@ -264,7 +264,7 @@ export default class EachBlockWrapper extends Wrapper {
 			block.add_element(
 				update_anchor_node as Identifier,
 				x`@empty()`,
-				parent_nodes && x`@empty()`,
+				parent_nodes && x`@claim_text(${parent_nodes}, '')`,
 				parent_node
 			);
 		}
@@ -401,7 +401,7 @@ export default class EachBlockWrapper extends Wrapper {
 			this.block.add_element(
 				this.block.first,
 				x`@empty()`,
-				parent_nodes && x`@empty()`,
+				parent_nodes && x`@claim_text(#nodes, '')`,
 				null
 			);
 		}
